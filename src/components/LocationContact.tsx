@@ -1,129 +1,124 @@
 import React from 'react';
-import { MapPin, Clock, Phone, Compass } from 'lucide-react';
+import { MapPin, Clock, Phone } from 'lucide-react';
+import { LotusMotif } from './LotusMotif';
 
 export const LocationContact: React.FC = () => {
   return (
-    <section id="contact" className="py-24 sm:py-32 bg-cream/40 relative overflow-hidden">
-      <div className="absolute inset-0 bg-grain pointer-events-none opacity-40" />
-
+    <section id="contact" className="py-20 md:py-24 bg-pond-dark relative text-ivory border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-ivory border border-antique">
-            <Compass className="w-3.5 h-3.5 text-gold" />
-            <span className="text-[11px] font-medium tracking-[0.24em] uppercase text-forest">
-              Sanctuary Haven
+        <div className="max-w-2xl space-y-3 mb-12">
+          <div className="flex items-center gap-2.5">
+            <LotusMotif size={20} className="text-blush" />
+            <span className="text-xs uppercase tracking-[0.24em] text-blush font-light">
+              Sanctuary Enclave
             </span>
           </div>
 
-          <h2 className="font-serif text-4xl sm:text-5xl text-charcoal font-normal">
-            Find Stillness With Us
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-ivory font-normal leading-tight">
+            Find stillness with us.
           </h2>
 
-          <p className="text-charcoal-muted text-sm sm:text-base font-light">
-            Located in a quiet garden enclave away from urban bustle. Advance appointments are recommended.
+          <p className="text-ivory/70 text-sm sm:text-base font-light leading-relaxed">
+            Nestled in a secluded courtyard garden away from urban transit noise. All visits are prepared exclusively by advance reservation.
           </p>
         </div>
 
-        {/* 2-Column Editorial Grid: Details & Atmospheric Preview */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+        {/* 2-Column Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* Left Column: Sanctuary Information */}
-          <div className="lg:col-span-6 bg-ivory rounded-3xl p-8 sm:p-10 shadow-soft border border-antique flex flex-col justify-between space-y-8">
-            <div className="space-y-6">
+          <div className="lg:col-span-6 bg-midnight/50 rounded-2xl p-6 sm:p-8 border border-white/10 flex flex-col justify-between space-y-6">
+            <div className="space-y-6 divide-y divide-white/10">
               
-              <div className="flex items-start gap-4 pb-6 border-b border-forest/10">
-                <div className="p-3 rounded-xl bg-forest/10 text-forest shrink-0">
-                  <MapPin className="w-5 h-5" />
+              <div className="flex items-start gap-4">
+                <div className="p-2.5 rounded-lg bg-pond text-blush shrink-0 border border-white/10">
+                  <MapPin className="w-4 h-4" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-lg font-medium text-charcoal">
-                    Sanctuary Address (Configurable)
+                  <h3 className="font-serif text-base font-normal text-ivory">
+                    Sanctuary Address
                   </h3>
-                  <p className="text-sm text-charcoal-muted mt-1 leading-relaxed">
-                    Pavilion 4, Gulmohar Avenue, Bandra West enclave <br />
+                  <p className="text-xs sm:text-sm text-ivory/70 mt-1 leading-relaxed font-light">
+                    Pavilion 4, Gulmohar Avenue, Bandra West Enclave <br />
                     Mumbai, Maharashtra 400050, India
                   </p>
-                  <span className="text-[10px] text-sage-dark uppercase tracking-wider block mt-1">
-                    * Sample sanctuary address. Replace with your permanent property address.
+                  <span className="text-[10px] text-blush/80 uppercase tracking-wider block mt-1">
+                    * Sample sanctuary address.
                   </span>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 pb-6 border-b border-forest/10">
-                <div className="p-3 rounded-xl bg-forest/10 text-forest shrink-0">
-                  <Clock className="w-5 h-5" />
+              <div className="flex items-start gap-4 pt-6">
+                <div className="p-2.5 rounded-lg bg-pond text-blush shrink-0 border border-white/10">
+                  <Clock className="w-4 h-4" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-lg font-medium text-charcoal">
+                  <h3 className="font-serif text-base font-normal text-ivory">
                     Sanctuary Hours
                   </h3>
-                  <p className="text-sm text-charcoal-muted mt-1 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-ivory/70 mt-1 leading-relaxed font-light">
                     Monday to Sunday: 8:30 AM – 8:00 PM <br />
-                    Morning Rituals Commence: 9:00 AM <br />
-                    Final Twilight Session: 6:30 PM
+                    Morning Rituals: 9:00 AM · Final Twilight Session: 6:30 PM
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-xl bg-forest/10 text-forest shrink-0">
-                  <Phone className="w-5 h-5" />
+              <div className="flex items-start gap-4 pt-6">
+                <div className="p-2.5 rounded-lg bg-pond text-blush shrink-0 border border-white/10">
+                  <Phone className="w-4 h-4" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-lg font-medium text-charcoal">
+                  <h3 className="font-serif text-base font-normal text-ivory">
                     Sanctuary Concierge
                   </h3>
-                  <p className="text-sm text-charcoal-muted mt-1">
+                  <p className="text-xs sm:text-sm text-ivory/70 mt-1 font-light leading-relaxed">
                     Concierge Line: +91 (Sanctuary Desk) <br />
                     Direct Enquiries: concierge@lotusayurvedicspa.example
                   </p>
-                  <span className="text-[10px] text-sage-dark uppercase tracking-wider block mt-1">
-                    * Configurable contact placeholders.
-                  </span>
                 </div>
               </div>
 
             </div>
 
-            {/* Quick Consultation CTA */}
-            <div className="pt-6 border-t border-forest/10 flex flex-wrap items-center gap-4">
+            {/* Quick Actions */}
+            <div className="pt-4 border-t border-white/10 flex flex-wrap items-center gap-3">
               <a
                 href="#booking"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-forest text-ivory text-xs uppercase tracking-widest font-medium hover:bg-terracotta transition-colors shadow-sm"
+                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-blush text-pond-dark text-xs uppercase tracking-widest font-medium hover:bg-blush-light transition-colors"
               >
                 <span>Request Appointment</span>
               </a>
 
               <a
                 href="#faqs"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-forest/20 text-xs uppercase tracking-wider text-forest hover:bg-cream transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/15 text-xs uppercase tracking-wider text-ivory/80 hover:text-blush hover:border-blush/40 transition-colors"
               >
-                <span>View Guest Etiquette</span>
+                <span>Guest Etiquette</span>
               </a>
             </div>
 
           </div>
 
-          {/* Right Column: Natural Architecture Visual & Map Enclave Frame */}
-          <div className="lg:col-span-6 rounded-3xl overflow-hidden shadow-soft border border-antique bg-forest relative min-h-[380px] flex flex-col justify-end p-8 text-ivory">
+          {/* Right Column: Visual Atmosphere */}
+          <div className="lg:col-span-6 rounded-2xl overflow-hidden border border-white/10 bg-midnight relative min-h-[340px] flex flex-col justify-end p-6 sm:p-8 text-ivory">
             <img
-              src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=1200&q=85"
-              alt="Lotus Ayurvedic Sanctuary Courtyard and Zen Garden"
-              className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-50"
+              src="/images/landing.jpeg"
+              alt="Lotus Ayurvedic Sanctuary Courtyard with blooming pink lotus flowers"
+              className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-60"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-forest-deep via-forest/80 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-pond via-pond/60 to-transparent" />
 
-            <div className="relative z-10 space-y-4 max-w-md">
-              <span className="text-[11px] uppercase tracking-[0.22em] text-gold-light font-medium">
+            <div className="relative z-10 space-y-3 max-w-md">
+              <span className="text-[10px] uppercase tracking-[0.2em] text-blush font-medium">
                 The Arrival Experience
               </span>
-              <h3 className="font-serif text-2xl sm:text-3xl font-light text-ivory">
-                Gentle footsteps, warm herbal scents, and a courtyard designed for quiet breath.
+              <h3 className="font-serif text-xl sm:text-2xl font-light text-ivory leading-snug">
+                Quiet footsteps, warm herbal decoctions, and still water reflections.
               </h3>
-              <p className="text-xs text-ivory/80 leading-relaxed font-light">
-                Private dressing chambers, pure bronze foot baths, and dedicated silent relaxation alcoves ensure seamless retreat from the outside world.
+              <p className="text-xs text-ivory/70 leading-relaxed font-light">
+                Private dressing chambers, pure bronze foot baths, and dedicated silent unwinding alcoves allow guests to transition smoothly from the outer city to inward peace.
               </p>
             </div>
           </div>

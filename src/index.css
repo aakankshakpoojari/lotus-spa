@@ -4,18 +4,17 @@
 
 @layer base {
   :root {
-    --color-ivory: #F5F0E5;
-    --color-cream: #EAE2D3;
-    --color-sage: #87927A;
-    --color-forest: #34483A;
-    --color-terracotta: #633D32;
-    --color-gold: #C4A36A;
-    --color-charcoal: #292923;
+    --color-pond: #0B1110;
+    --color-midnight: #151E20;
+    --color-botanical: #536B55;
+    --color-blush: #E7A0B4;
+    --color-ivory: #F5EFE6;
+    --color-gold: #D9A64E;
   }
 
   body {
-    background-color: #F5F0E5;
-    color: #292923;
+    background-color: #0B1110;
+    color: #F5EFE6;
     font-family: 'DM Sans', sans-serif;
     overflow-x: hidden;
   }
@@ -26,25 +25,130 @@
   }
 }
 
-/* Custom organic grain texture overlay */
-.bg-grain {
-  background-image: radial-gradient(rgba(41, 41, 35, 0.04) 1px, transparent 0);
-  background-size: 24px 24px;
+/* Water Ripple Animations */
+@keyframes water-ripple {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.35;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
 }
 
-/* Custom delicate border styles */
-.border-antique {
-  border-color: rgba(196, 163, 106, 0.25);
+.animate-water-ripple {
+  animation: water-ripple 6s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
 }
 
-.border-forest-subtle {
-  border-color: rgba(52, 72, 58, 0.15);
+.animate-water-ripple-delayed {
+  animation: water-ripple 7s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+  animation-delay: 3s;
 }
 
-/* Custom smooth luxury focus outlines */
-*:focus-visible {
-  outline: 2px solid #87927A;
-  outline-offset: 3px;
+/* Soft floating lotus motion */
+@keyframes lotus-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(0.4deg);
+  }
+}
+
+.animate-lotus-float {
+  animation: lotus-float 9s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Water surface ambient shimmer */
+@keyframes water-shimmer {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.28;
+    transform: scale(1.02);
+  }
+}
+
+.animate-water-shimmer {
+  animation: water-shimmer 8s ease-in-out infinite;
+}
+
+/* Continuous Lotus Loader Rotation */
+@keyframes spin-lotus {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-lotus {
+  animation: spin-lotus 3.8s linear infinite;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+/* Raindrop Ripple Click Interaction */
+@keyframes raindrop-ripple-expand {
+  0% {
+    transform: translate(-50%, -50%) scale(0.25);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.45;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.2);
+    opacity: 0;
+  }
+}
+
+@keyframes raindrop-ripple-secondary {
+  0% {
+    transform: translate(-50%, -50%) scale(0.15);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.6);
+    opacity: 0;
+  }
+}
+
+.raindrop-ripple-primary {
+  border-radius: 9999px;
+  pointer-events: none;
+  border: 1.5px solid rgba(231, 160, 180, 0.65);
+  box-shadow: 0 0 12px rgba(231, 160, 180, 0.3), inset 0 0 6px rgba(231, 160, 180, 0.15);
+  animation: raindrop-ripple-expand 0.72s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+.raindrop-ripple-secondary {
+  border-radius: 9999px;
+  pointer-events: none;
+  border: 1px solid rgba(245, 239, 230, 0.35);
+  animation: raindrop-ripple-secondary 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.06s forwards;
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-lotus-float,
+  .animate-water-ripple,
+  .animate-water-ripple-delayed,
+  .animate-water-shimmer,
+  .animate-spin-lotus,
+  .raindrop-ripple-primary,
+  .raindrop-ripple-secondary {
+    animation: none !important;
+  }
 }
 
 /* Luxury scrollbar */
@@ -52,41 +156,13 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #EAE2D3;
+  background: #0B1110;
 }
 ::-webkit-scrollbar-thumb {
-  background: #87927A;
+  background: #1D282B;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #34483A;
+  background: #536B55;
 }
 
-/* Image reveal overlay animations */
-@keyframes subtle-float {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-8px) rotate(1.5deg);
-  }
-}
-
-.animate-subtle-float {
-  animation: subtle-float 8s ease-in-out infinite;
-}
-
-@keyframes gentle-pulse {
-  0%, 100% {
-    opacity: 0.85;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.03);
-  }
-}
-
-.animate-gentle-pulse {
-  animation: gentle-pulse 6s ease-in-out infinite;
-}

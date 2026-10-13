@@ -7,48 +7,45 @@ export default {
   theme: {
     extend: {
       colors: {
-        ivory: '#F5F0E5',
-        cream: '#EAE2D3',
-        sage: {
-          DEFAULT: '#87927A',
-          light: '#A3AD98',
-          dark: '#6B765F',
+        pond: {
+          DEFAULT: '#0B1110',
+          dark: '#060A09',
+          light: '#131A19',
         },
-        forest: {
-          DEFAULT: '#34483A',
-          light: '#425A4A',
-          dark: '#243429',
-          deep: '#1B261E',
+        midnight: {
+          DEFAULT: '#151E20',
+          dark: '#0E1517',
+          light: '#1D282B',
         },
-        terracotta: {
-          DEFAULT: '#633D32',
-          light: '#7B4D40',
-          dark: '#4D2F27',
+        botanical: {
+          DEFAULT: '#536B55',
+          light: '#6B856D',
+          dark: '#3E5240',
+        },
+        blush: {
+          DEFAULT: '#E7A0B4',
+          light: '#F2C2CF',
+          dark: '#D17C94',
+        },
+        ivory: {
+          DEFAULT: '#F5EFE6',
+          muted: '#D8CFBE',
+          dark: '#C4B9A5',
         },
         gold: {
-          DEFAULT: '#C4A36A',
-          light: '#D4B886',
-          dark: '#A6864E',
-        },
-        charcoal: {
-          DEFAULT: '#292923',
-          light: '#3D3D36',
-          muted: '#5A5A50',
+          DEFAULT: '#D9A64E',
+          light: '#E6BD75',
+          dark: '#B8842E',
         },
       },
       fontFamily: {
         serif: ['"Cormorant Garamond"', 'Playfair Display', 'Georgia', 'serif'],
         sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
-        accent: ['"Playfair Display"', 'Georgia', 'serif'],
       },
       boxShadow: {
-        'soft': '0 10px 30px -10px rgba(41, 41, 35, 0.08)',
-        'elevated': '0 20px 40px -15px rgba(41, 41, 35, 0.12)',
-        'glow-gold': '0 0 35px -5px rgba(196, 163, 106, 0.25)',
+        'pond-glow': '0 0 35px -5px rgba(231, 160, 180, 0.15)',
+        'water-depth': '0 20px 50px -10px rgba(11, 17, 16, 0.8)',
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-      }
     },
   },
   plugins: [],

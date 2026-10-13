@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FAQS } from '../data/faqs';
-import { ChevronDown, HelpCircle } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
+import { LotusMotif } from './LotusMotif';
 
 export const FaqSection: React.FC = () => {
   const [openId, setOpenId] = useState<string | null>(FAQS[0].id);
@@ -10,71 +11,81 @@ export const FaqSection: React.FC = () => {
   };
 
   return (
-    <section id="faqs" className="py-24 sm:py-32 bg-ivory relative overflow-hidden">
-      <div className="absolute inset-0 bg-grain pointer-events-none opacity-40" />
-
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="faqs" className="py-20 md:py-24 bg-pond relative text-ivory border-t border-white/5">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cream border border-antique">
-            <HelpCircle className="w-3.5 h-3.5 text-gold" />
-            <span className="text-[11px] font-medium tracking-[0.24em] uppercase text-forest">
-              Sanctuary Etiquette & Guidance
-            </span>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+          
+          {/* Left Column: Sticky Editorial Heading & Etiquette Note */}
+          <div className="lg:col-span-5 space-y-4 lg:sticky lg:top-28">
+            <div className="flex items-center gap-2.5">
+              <LotusMotif size={20} className="text-blush" />
+              <span className="text-xs uppercase tracking-[0.24em] text-blush font-light">
+                Guest Etiquette
+              </span>
+            </div>
+
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-ivory font-normal leading-tight">
+              Preparing for your visit.
+            </h2>
+
+            <p className="text-ivory/70 text-sm sm:text-base font-light leading-relaxed">
+              To preserve our acoustic stillness, we accept appointments exclusively in advance. 
+              Here are thoughtful details regarding attire, consultation pacing, and timing.
+            </p>
+
+            <div className="pt-4 border-t border-white/10">
+              <p className="text-xs text-ivory/50 font-light">
+                Have specific contraindications or prenatal requirements? <br />
+                Our Vaidya will discuss custom adaptations prior to commencing your session.
+              </p>
+            </div>
           </div>
 
-          <h2 className="font-serif text-4xl sm:text-5xl text-charcoal font-normal">
-            Frequently Asked Questions
-          </h2>
+          {/* Right Column: Clean Accordion List */}
+          <div className="lg:col-span-7 space-y-3" role="region" aria-label="Frequently Asked Questions">
+            {FAQS.map((faq) => {
+              const isOpen = openId === faq.id;
 
-          <p className="text-charcoal-muted text-sm sm:text-base font-light">
-            Everything you need to know to prepare for a restful, unhurried wellness visit.
-          </p>
-        </div>
-
-        {/* Accordion List */}
-        <div className="space-y-4" role="region" aria-label="Frequently Asked Questions Accordion">
-          {FAQS.map((faq) => {
-            const isOpen = openId === faq.id;
-
-            return (
-              <div
-                key={faq.id}
-                className={`rounded-2xl transition-all duration-300 border ${
-                  isOpen
-                    ? 'bg-cream/70 border-forest/30 shadow-soft'
-                    : 'bg-ivory border-forest/15 hover:border-forest/30'
-                }`}
-              >
-                <button
-                  type="button"
-                  onClick={() => toggleAccordion(faq.id)}
-                  aria-expanded={isOpen}
-                  className="w-full text-left p-6 flex items-center justify-between gap-4 focus:outline-none"
+              return (
+                <div
+                  key={faq.id}
+                  className={`rounded-xl transition-all duration-300 border ${
+                    isOpen
+                      ? 'bg-midnight/80 border-blush/40 shadow-sm'
+                      : 'bg-midnight/30 border-white/5 hover:border-white/15'
+                  }`}
                 >
-                  <span className="font-serif text-lg sm:text-xl text-charcoal font-medium">
-                    {faq.question}
-                  </span>
-                  <div
-                    className={`w-8 h-8 rounded-full border border-forest/20 flex items-center justify-center shrink-0 transition-transform duration-300 ${
-                      isOpen ? 'rotate-180 bg-forest text-ivory' : 'text-forest hover:bg-forest/10'
-                    }`}
+                  <button
+                    type="button"
+                    onClick={() => toggleAccordion(faq.id)}
+                    aria-expanded={isOpen}
+                    className="w-full text-left p-5 flex items-center justify-between gap-4 focus:outline-none"
                   >
-                    <ChevronDown className="w-4 h-4" />
-                  </div>
-                </button>
-
-                {isOpen && (
-                  <div className="px-6 pb-6 text-sm text-charcoal-muted leading-relaxed font-light animate-fadeIn">
-                    <div className="pt-2 border-t border-forest/10">
-                      {faq.answer}
+                    <span className="font-serif text-base sm:text-lg text-ivory font-normal">
+                      {faq.question}
+                    </span>
+                    <div
+                      className={`w-7 h-7 rounded-full border border-white/15 flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                        isOpen ? 'rotate-180 bg-blush text-pond-dark border-blush' : 'text-ivory/60'
+                      }`}
+                    >
+                      <ChevronDown className="w-3.5 h-3.5" />
                     </div>
-                  </div>
-                )}
-              </div>
-            );
-          })}
+                  </button>
+
+                  {isOpen && (
+                    <div className="px-5 pb-5 text-xs sm:text-sm text-ivory/70 leading-relaxed font-light">
+                      <div className="pt-2 border-t border-white/10">
+                        {faq.answer}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
         </div>
 
       </div>

@@ -6,19 +6,19 @@ export const TREATMENTS: Treatment[] = [
     name: 'Abhyanga Full-Body Ritual',
     sanskritName: 'अभ्यङ्ग (Abhyaṅga)',
     category: 'Body Therapy',
-    shortDescription: 'Warm, herb-infused sesame oil synchronized body massage that dissolves fatigue and restores neuromuscular balance.',
-    fullDescription: 'Abhyanga is the cornerstone of classical Ayurvedic bodywork. Warm herbal oils custom-blended with Bala, Ashwagandha, and Sesame are applied with rhythmic, flowing strokes aligned with energy pathways (Nadis). The gentle heat promotes lymphatic flow, nourishes deep tissues, and encourages profound cellular restoration.',
+    shortDescription: 'Warm, herb-infused sesame and lotus seed oil synchronized body massage that dissolves fatigue and restores neuromuscular balance.',
+    fullDescription: 'Abhyanga is the cornerstone of classical Ayurvedic bodywork. Warm herbal oils custom-blended with Bala, Ashwagandha, and Cold-Pressed Sesame are applied with rhythmic, flowing strokes aligned with energy pathways (Nadis). The gentle heat promotes lymphatic flow, nourishes deep tissues, and encourages profound cellular restoration.',
     durationMinutes: 75,
     priceINR: 4200,
-    imageUrl: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=85',
-    accentFlower: '/images/f1.png',
+    imageUrl: '/images/massage.png',
+    accentFlower: '/images/loading.webp',
     benefits: [
       'Encourages lymphatic circulation and natural detoxification',
       'Relieves neuromuscular stiffness and physical fatigue',
       'Deeply conditions dehydrated skin with medicinal lipids',
       'Calms an agitated Vata dosha and promotes restorative sleep'
     ],
-    herbalIngredients: ['Cold-pressed Sesame Oil', 'Ashwagandha Root', 'Bala (Sida cordifolia)', 'Camphor Essence'],
+    herbalIngredients: ['Cold-pressed Sesame Oil', 'Ashwagandha Root', 'Bala (Sida cordifolia)', 'Sacred Lotus Extract'],
     bestFor: 'Those experiencing general fatigue, dry skin, muscle tension, or restless sleep.',
     idealTime: 'Morning or late afternoon'
   },
@@ -32,14 +32,14 @@ export const TREATMENTS: Treatment[] = [
     durationMinutes: 60,
     priceINR: 4800,
     imageUrl: 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1200&q=85',
-    accentFlower: '/images/f2.png',
+    accentFlower: '/images/loading.webp',
     benefits: [
       'Profound nervous system relaxation and stress dissolution',
       'Supports healthy circadian rhythms and deep insomnia relief',
       'Nourishes the scalp, hair follicles, and cranial nerves',
       'Enhances mental clarity, focus, and quiet introspection'
     ],
-    herbalIngredients: ['Brahmi Medicated Oil', 'Gotu Kola', 'Shankhpushpi', 'Organic Virgin Coconut Oil'],
+    herbalIngredients: ['Brahmi Medicated Oil', 'Gotu Kola', 'Shankhpushpi', 'Pink Lotus Petal Hydrosol'],
     bestFor: 'Busy minds, digital burnout, chronic stress, or disturbed sleep patterns.',
     idealTime: 'Afternoon or early evening'
   },
@@ -53,7 +53,7 @@ export const TREATMENTS: Treatment[] = [
     durationMinutes: 90,
     priceINR: 5200,
     imageUrl: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=85',
-    accentFlower: '/images/f3.png',
+    accentFlower: '/images/loading.webp',
     benefits: [
       'Targeted relief for stiff shoulders, lower back, and joints',
       'Thermo-therapy improves local circulation and mobility',
@@ -69,19 +69,19 @@ export const TREATMENTS: Treatment[] = [
     name: 'Mukha Lepam Botanical Facial',
     sanskritName: 'मुख लेपनम् (Mukha Lepanam)',
     category: 'Botanical Skincare',
-    shortDescription: 'An organic facial ritual with saffron kumkumadi nectar, sandalwood paste, and delicate marma point stimulation.',
-    fullDescription: 'Mukha Lepam is an exquisite beauty ritual that treats the skin as a reflection of inner vitality. The experience begins with a gentle cleansing using raw milk and rose water, followed by an enzymatic botanical scrub. Pure Kumkumadi saffron oil is massaged into facial Marma points to sculpt and stimulate microcirculation, topped with a customized herbal mask of wild turmeric and chandan.',
+    shortDescription: 'An organic facial ritual with saffron kumkumadi nectar, red lotus stamens, and delicate marma point stimulation.',
+    fullDescription: 'Mukha Lepam is an exquisite beauty ritual that treats the skin as a reflection of inner vitality. The experience begins with a gentle cleansing using raw milk and rose water, followed by an enzymatic botanical scrub. Pure Kumkumadi saffron oil is massaged into facial Marma points to sculpt and stimulate microcirculation, topped with a customized herbal mask of wild turmeric and sandalwood.',
     durationMinutes: 60,
     priceINR: 3800,
     imageUrl: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=85',
-    accentFlower: '/images/f3.png',
+    accentFlower: '/images/loading.webp',
     benefits: [
       'Restores luminous cellular glow without synthetic chemicals',
       'Gentle facial Marma acupressure releases jaw and brow tension',
       'Refines skin texture with pure Ayurvedic botanicals',
       'Hydrates and balances natural sebum production'
     ],
-    herbalIngredients: ['Kumkumadi Saffron Elixir', 'White Sandalwood (Chandan)', 'Wild Kasthuri Manjal', 'Damask Rose Hydrosol'],
+    herbalIngredients: ['Kumkumadi Saffron Elixir', 'White Sandalwood (Chandan)', 'Wild Lotus Petals', 'Damask Rose Hydrosol'],
     bestFor: 'Dull complexion, environmental pollution defense, or gentle self-care rejuvenation.',
     idealTime: 'Morning or afternoon'
   },
@@ -90,19 +90,19 @@ export const TREATMENTS: Treatment[] = [
     name: 'Padabhyanga Bronze Foot Ceremony',
     sanskritName: 'पादाभ्यङ्ग (Pādābhyaṅga)',
     category: 'Specialized Ritual',
-    shortDescription: 'A soothing thermal foot bath infused with fresh jasmine petals, followed by bronze Kasa bowl reflexology.',
-    fullDescription: 'According to Ayurveda, the feet house reflex zones connected directly to the nervous system and ocular meridians. The ritual commences with a warm water immersion sprinkled with fresh flowers and sacred salts. We then massage the feet, calves, and soles using warm ghee and an artisan Kasa (bronze) bowl that draws excess metabolic heat from the body.',
+    shortDescription: 'A soothing thermal foot bath infused with fresh lotus petals, followed by bronze Kasa bowl reflexology.',
+    fullDescription: 'According to Ayurveda, the feet house reflex zones connected directly to the nervous system and ocular meridians. The ritual commences with a warm water immersion sprinkled with fresh lotus blossoms and sacred salts. We then massage the feet, calves, and soles using warm ghee and an artisan Kasa (bronze) bowl that draws excess metabolic heat from the body.',
     durationMinutes: 45,
     priceINR: 2600,
     imageUrl: 'https://images.unsplash.com/photo-1519735777090-ec97162dc266?auto=format&fit=crop&w=1200&q=85',
-    accentFlower: '/images/f1.png',
+    accentFlower: '/images/loading.webp',
     benefits: [
       'Draws excess internal body heat (Pitta) through the soles',
       'Instantly relieves tired, heavy, and swollen legs',
       'Deeply grounds scattered mental energy and anxiety',
       'Prepares the body for deep, peaceful nightly rest'
     ],
-    herbalIngredients: ['Pure Cow Ghee', 'Fresh Jasmine Flowers', 'Manjistha Root', 'Epsom & Rock Salt'],
+    herbalIngredients: ['Pure Cow Ghee', 'Fresh Lotus Petals', 'Manjistha Root', 'Epsom & Rock Salt'],
     bestFor: 'Those on their feet all day, frequent travelers, or a quick midday restorative break.',
     idealTime: 'Late afternoon or evening'
   },
@@ -115,15 +115,15 @@ export const TREATMENTS: Treatment[] = [
     fullDescription: 'The definitive Lotus Ayurvedic sanctuary experience. Samatva represents holistic equilibrium of body, mind, and spirit. Beginning with an extensive 60-minute warm herbal Abhyanga to unburden the muscular body, the journey seamlessly transitions into a 30-minute meditative Shirodhara oil stream. Concludes with a warm herbal steam wrap.',
     durationMinutes: 105,
     priceINR: 6500,
-    imageUrl: 'https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1200&q=85',
-    accentFlower: '/images/f2.png',
+    imageUrl: '/images/Ammentiies.png',
+    accentFlower: '/images/loading.webp',
     benefits: [
       'Complete physical and psycho-spiritual rejuvenation',
       'Synergistic combination of neuromuscular and nervous system treatments',
       'Deep cellular rehydration through warm herbal steam integration',
       'Leaves the guest in a state of tranquil, luminous stillness'
     ],
-    herbalIngredients: ['Custom Dosha-Specific Oil Blend', 'Brahmi & Shankhpushpi', 'Ashwagandha', 'Cardamom & Rose'],
+    herbalIngredients: ['Custom Dosha-Specific Oil Blend', 'Brahmi & Shankhpushpi', 'Ashwagandha', 'Lotus Essential Oil'],
     bestFor: 'Those seeking the ultimate all-encompassing wellness reset and complete immersion.',
     idealTime: 'Morning or early afternoon'
   }

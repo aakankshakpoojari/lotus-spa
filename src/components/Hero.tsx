@@ -1,180 +1,119 @@
-import React from 'react';
-import { Compass, Sparkles } from 'lucide-react';
+import { Compass } from 'lucide-react';
+import { LotusMotif } from './LotusMotif';
 
 interface HeroProps {
-  onDiscoverClick: () => void;
   onExploreClick: () => void;
+  onPhilosophyClick: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onDiscoverClick, onExploreClick }) => {
+export const Hero: React.FC<HeroProps> = ({ onExploreClick, onPhilosophyClick }) => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden bg-ivory"
+      className="relative min-h-screen w-full flex flex-col justify-between pt-28 pb-12 sm:pt-36 sm:pb-16 overflow-hidden bg-pond"
     >
-      {/* Background Subtle Gradient & Organic Texture */}
-      <div className="absolute inset-0 bg-grain pointer-events-none opacity-60" />
-      <div className="absolute top-0 right-0 w-96 h-96 bg-sage/10 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold/10 rounded-full blur-3xl pointer-events-none -ml-20 -mb-20" />
-
-      {/* Main Container */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
-          {/* Left Column: Editorial Typography & Intentional CTAs */}
-          <div className="lg:col-span-7 flex flex-col justify-center space-y-7 text-left">
-            
-            {/* Eyebrow with Botanical Emblem */}
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-cream border border-antique self-start">
-              <span className="w-2 h-2 rounded-full bg-sage animate-ping" />
-              <span className="text-[11px] font-medium tracking-[0.24em] uppercase text-forest">
-                AN AYURVEDIC WELLNESS SANCTUARY
-              </span>
-            </div>
-
-            {/* Oversized Serif Headline */}
-            <div className="space-y-2">
-              <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[5.2rem] leading-[1.04] text-charcoal font-normal tracking-tight">
-                Return to your <br />
-                <span className="italic font-light text-forest relative inline-block">
-                  natural rhythm.
-                  {/* Subtle underline flourish */}
-                  <svg
-                    className="absolute -bottom-2 left-0 w-full text-gold/40 h-2"
-                    viewBox="0 0 200 8"
-                    fill="none"
-                    preserveAspectRatio="none"
-                  >
-                    <path
-                      d="M1 5.5C45 2 155 2 199 5.5"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </span>
-              </h1>
-            </div>
-
-            {/* Supporting Text */}
-            <p className="text-base sm:text-lg text-charcoal-muted max-w-xl font-light leading-relaxed">
-              Ancient Ayurvedic rituals, thoughtfully reimagined for modern living. 
-              Immerse in warm botanicals, sacred silence, and bespoke healing therapies tailored to your unique elemental balance.
-            </p>
-
-            {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-3">
-              <button
-                type="button"
-                onClick={onDiscoverClick}
-                className="group relative inline-flex items-center gap-3 px-7 py-4 rounded-full bg-forest text-ivory text-xs uppercase tracking-[0.2em] font-medium shadow-elevated hover:bg-terracotta transition-all duration-300 transform hover:-translate-y-0.5 border border-gold/40"
-              >
-                <Sparkles className="w-4 h-4 text-gold-light group-hover:rotate-12 transition-transform" />
-                <span>Discover Your Ritual</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={onExploreClick}
-                className="inline-flex items-center gap-2 px-6 py-4 rounded-full bg-cream/80 text-forest text-xs uppercase tracking-[0.2em] font-medium border border-forest/15 hover:border-forest/40 hover:bg-cream transition-all duration-300"
-              >
-                <Compass className="w-4 h-4 text-sage-dark" />
-                <span>Explore Treatments</span>
-              </button>
-            </div>
-
-            {/* Authentic Brand Markers */}
-            <div className="pt-8 border-t border-forest/10 grid grid-cols-3 gap-6 max-w-lg">
-              <div>
-                <p className="font-serif text-2xl text-forest font-semibold">100%</p>
-                <p className="text-[11px] text-charcoal/70 uppercase tracking-wider mt-0.5">Organic Botanicals</p>
-              </div>
-              <div>
-                <p className="font-serif text-2xl text-forest font-semibold">5,000+</p>
-                <p className="text-[11px] text-charcoal/70 uppercase tracking-wider mt-0.5">Years of Heritage</p>
-              </div>
-              <div>
-                <p className="font-serif text-2xl text-forest font-semibold">Bespoke</p>
-                <p className="text-[11px] text-charcoal/70 uppercase tracking-wider mt-0.5">Dosha Rituals</p>
-              </div>
-            </div>
-
-          </div>
-
-          {/* Right Column: Layered Photographic Composition with Real Watercolor Botanicals */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
-              
-              {/* Primary Architectural / Treatment Sanctuary Frame */}
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-cream bg-cream">
-                <div className="aspect-[4/5] overflow-hidden relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1400&q=85"
-                    alt="Lotus Ayurvedic Sanctuary Treatment Suite with Warm Sunlight and Natural Botanicals"
-                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                    loading="eager"
-                  />
-                  {/* Subtle warm gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-forest/70 via-transparent to-transparent opacity-80" />
-
-                  {/* Caption badge inside image */}
-                  <div className="absolute bottom-6 left-6 right-6 text-ivory">
-                    <span className="text-[10px] tracking-[0.25em] uppercase text-gold-light font-medium">
-                      The Sanctuary Suite
-                    </span>
-                    <h3 className="font-serif text-xl sm:text-2xl mt-1 text-ivory font-light leading-snug">
-                      Warm brass bowls, herb-steeped oils & meditative silence
-                    </h3>
-                  </div>
-                </div>
-              </div>
-
-              {/* Layered Accent 1: Watercolor White Lotus / Lily Motif */}
-              <div className="absolute -top-10 -right-10 w-36 h-36 sm:w-44 sm:h-44 pointer-events-none z-20 animate-subtle-float">
-                <img
-                  src="/images/f1.png"
-                  alt="Lotus Flower Botanical Motif"
-                  className="w-full h-full object-contain filter drop-shadow-xl"
-                />
-              </div>
-
-              {/* Layered Accent 2: Floating Editorial Card */}
-              <div className="absolute -bottom-6 -left-6 sm:-left-8 bg-ivory/95 backdrop-blur-md p-4 sm:p-5 rounded-xl shadow-xl border border-antique max-w-[240px] sm:max-w-[270px] z-20">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center p-1.5 border border-forest/20">
-                    <img src="/images/f2.png" alt="Herbal Flower" className="w-full h-full object-contain" />
-                  </div>
-                  <div>
-                    <h4 className="font-serif text-sm font-semibold text-charcoal">Snehana & Swedana</h4>
-                    <p className="text-[11px] text-charcoal-muted leading-tight mt-0.5">
-                      Warm oleation and herbal medicinal decoctions
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
+      {/* 1. Full-Viewport Living Lotus Pond Photograph Background */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 w-full h-full animate-lotus-float scale-105 origin-center transition-transform duration-1000">
+          <img
+            src="/images/landing.jpeg"
+            alt="Living Lotus Pond with three sacred blooming pink lotus flowers and dark still water"
+            className="w-full h-full object-cover object-center select-none"
+            loading="eager"
+          />
         </div>
 
-        {/* Understated Scroll Indicator */}
-        <div className="pt-16 sm:pt-20 flex flex-col items-center justify-center">
-          <a
-            href="#philosophy"
-            className="group flex flex-col items-center gap-2 text-charcoal-muted hover:text-forest transition-colors"
-            aria-label="Scroll to Our Philosophy"
-          >
-            <span className="text-[10px] uppercase tracking-[0.3em] font-medium group-hover:tracking-[0.35em] transition-all">
-              Scroll to explore
-            </span>
-            <div className="w-6 h-10 rounded-full border border-forest/25 flex items-start justify-center p-1.5">
-              <div className="w-1 h-2 bg-sage rounded-full animate-bounce" />
-            </div>
-          </a>
+        {/* 2. Realistic Water Ripples Overlay around the water & flowers */}
+        {/* Ripple cluster 1 (Center-Left) */}
+        <div className="absolute bottom-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-80 h-80 pointer-events-none">
+          <div className="absolute inset-0 rounded-full border border-blush/20 animate-water-ripple" />
+          <div className="absolute inset-0 rounded-full border border-white/10 animate-water-ripple-delayed" />
         </div>
 
+        {/* Ripple cluster 2 (Lower Right) */}
+        <div className="absolute bottom-1/5 right-1/4 translate-x-1/4 w-96 h-96 pointer-events-none hidden sm:block">
+          <div className="absolute inset-0 rounded-full border border-blush/15 animate-water-ripple" style={{ animationDelay: '1.8s' }} />
+        </div>
+
+        {/* Subtle Water Light Shimmer */}
+        <div className="absolute inset-0 bg-radial-gradient from-transparent via-blush/5 to-transparent pointer-events-none animate-water-shimmer" />
+
+        {/* 3. Thoughtful Luxury Gradients: Keeps dark water deep and text readable while leaving lotus flowers luminous */}
+        {/* Top Vignette for Nav and Headline readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-pond/90 via-pond/40 to-transparent h-2/3" />
+        {/* Gentle Left Gradient for Headline Text Column */}
+        <div className="absolute inset-0 bg-gradient-to-r from-pond/80 via-pond/40 to-transparent w-full lg:w-3/5" />
+        {/* Bottom subtle grounding transition into next section */}
+        <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-pond via-pond/60 to-transparent" />
       </div>
+
+      {/* 4. Hero Content — Positioned with generous negative space, leaving the flowers visible */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col justify-center">
+        <div className="max-w-2xl space-y-6 sm:space-y-8 text-left pt-8 sm:pt-12">
+          
+          {/* Eyebrow with consistent animated lotus SVG motif */}
+          <div className="flex items-center gap-2.5">
+            <LotusMotif size={20} className="text-blush" />
+            <span className="text-xs uppercase tracking-[0.24em] text-blush font-light">
+              Ayurvedic Sanctuary
+            </span>
+          </div>
+
+          {/* Main Headline */}
+          <div className="space-y-2">
+            <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[1.04] text-ivory font-normal tracking-tight drop-shadow-md">
+              Return to your <br />
+              <span className="italic font-light text-blush relative inline-block">
+                natural rhythm.
+              </span>
+            </h1>
+          </div>
+
+          {/* Supporting Copy */}
+          <p className="text-base sm:text-lg md:text-xl text-ivory/85 max-w-xl font-light leading-relaxed drop-shadow-sm">
+            Ancient Ayurvedic wisdom. Restorative rituals. <br className="hidden sm:inline" />
+            A quieter kind of luxury.
+          </p>
+
+          {/* Call to Actions */}
+          <div className="flex flex-wrap items-center gap-4 pt-2 sm:pt-4">
+            <button
+              type="button"
+              onClick={onExploreClick}
+              className="group inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-blush hover:bg-blush-light text-pond-dark text-xs uppercase tracking-[0.2em] font-medium transition-all duration-300 shadow-sm transform hover:-translate-y-0.5 active:scale-95"
+            >
+              <span>Explore Rituals</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={onPhilosophyClick}
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-pond/60 backdrop-blur-md text-ivory text-xs uppercase tracking-[0.2em] font-medium border border-white/20 hover:border-blush/50 hover:bg-pond/80 transition-all duration-300 active:scale-95"
+            >
+              <Compass className="w-3.5 h-3.5 text-blush" />
+              <span>Our Philosophy</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      {/* 5. Discreet Scroll Indicator at Bottom */}
+      <div className="relative z-10 w-full flex flex-col items-center justify-center pt-8">
+        <a
+          href="#philosophy"
+          className="group flex flex-col items-center gap-2 text-ivory/60 hover:text-blush transition-colors"
+          aria-label="Scroll to discover philosophy"
+        >
+          <span className="text-[9.5px] uppercase tracking-[0.32em] font-light">
+            Scroll to Enter
+          </span>
+          <div className="w-5 h-8 rounded-full border border-white/25 flex items-start justify-center p-1">
+            <div className="w-1 h-2 bg-blush rounded-full animate-bounce" />
+          </div>
+        </a>
+      </div>
+
     </section>
   );
 };

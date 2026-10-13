@@ -1,174 +1,138 @@
 import React from 'react';
-import { Droplet, Sun, Wind, Mountain } from 'lucide-react';
+import { Wind, Sun, Mountain } from 'lucide-react';
+import { LotusMotif } from './LotusMotif';
 
 export const Philosophy: React.FC = () => {
   return (
-    <section id="philosophy" className="py-24 sm:py-32 bg-cream/40 relative overflow-hidden">
-      {/* Organic texture background */}
-      <div className="absolute inset-0 bg-grain pointer-events-none opacity-40" />
-      
+    <section id="philosophy" className="py-20 md:py-24 bg-pond relative text-ivory border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Intro Tag */}
+        {/* Section Header */}
         <div className="flex items-center gap-3 mb-6">
-          <span className="w-8 h-[1px] bg-terracotta" />
-          <span className="text-xs uppercase tracking-[0.25em] text-terracotta font-medium">
-            Our Ayurvedic Philosophy
+          <LotusMotif size={20} className="text-blush" />
+          <span className="text-xs uppercase tracking-[0.24em] text-blush font-light">
+            Ayurvedic Foundations
           </span>
         </div>
 
-        {/* Asymmetrical Editorial Composition */}
+        {/* Editorial Narrative */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
-          {/* Main Editorial Text - 7 Cols */}
           <div className="lg:col-span-7 space-y-8">
-            <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-charcoal font-normal leading-[1.12]">
-              Wellness is not a destination. <br />
-              <span className="italic text-terracotta font-light">It is a return.</span>
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-ivory font-normal leading-[1.15]">
+              Stillness is not absence. <br />
+              <span className="italic text-blush">It is the return of alignment.</span>
             </h2>
 
-            <div className="space-y-6 text-charcoal-muted text-base sm:text-lg font-light leading-relaxed">
+            <div className="space-y-5 text-ivory/80 text-base sm:text-lg font-light leading-relaxed">
               <p>
-                In a world that continually demands more speed, Ayurveda offers an ancient, timeless counter-current: 
-                the wisdom of stillness. We believe the human body is not an engine to be fixed, but an organic garden to be tended.
+                In classical Ayurveda, the sacred lotus (<span className="italic font-serif text-blush">Padma</span>) 
+                is revered because it rises untouched through dark water to open in clean, effortless symmetry. 
+                It reminds us that vitality is an inherent biological state—obscured only when our daily rhythms 
+                become disconnected from nature.
               </p>
               <p>
-                At Lotus, every treatment begins by honoring your constitutional rhythm—your <span className="font-serif italic text-forest font-medium">Prakriti</span>. 
-                Using sun-warmed cold-pressed oils, wild-harvested Himalayan botanicals, and synchronous touch, 
-                our therapies quiet systemic inflammation, soothe overloaded senses, and gently restore cellular equilibrium.
+                At Lotus, every therapeutic touch honors your individual constitutional makeup (<span className="italic font-serif text-blush">Prakriti</span>). 
+                We use unhurried sessions, warm cold-pressed herbal oils, and intentional stillness to re-establish your baseline harmony.
               </p>
             </div>
 
-            {/* The 3 Doshas / Elemental Pillars - Editorial Row */}
-            <div className="pt-6 border-t border-forest/10">
-              <h3 className="text-xs uppercase tracking-[0.2em] text-forest font-medium mb-6">
-                Harmonizing The Elemental Forces (Tridosha)
-              </h3>
+            {/* Dosha Constitutional Ledger (Editorial breakdown instead of repetitive cards) */}
+            <div className="pt-6 border-t border-white/10 space-y-5">
+              <div className="flex items-baseline justify-between">
+                <h3 className="text-xs uppercase tracking-[0.22em] text-ivory/60 font-medium">
+                  The Three Constitutional Forces (Tridosha)
+                </h3>
+                <span className="text-[11px] text-gold/80 italic font-serif">Prakriti Alignment</span>
+              </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <div className="divide-y divide-white/10 border-y border-white/10">
                 {/* Vata */}
-                <div className="p-5 rounded-xl bg-ivory border border-antique hover:border-gold/60 transition-all duration-300">
-                  <div className="flex items-center gap-2 text-forest mb-2">
-                    <Wind className="w-4 h-4 text-sage" />
-                    <span className="font-serif text-lg font-medium">Vāta (वात)</span>
+                <div className="py-4.5 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-4 items-baseline">
+                  <div className="sm:col-span-4 flex items-center gap-2">
+                    <Wind className="w-3.5 h-3.5 text-blush shrink-0" />
+                    <span className="font-serif text-lg font-normal text-ivory">Vāta (वात)</span>
+                    <span className="text-[10px] text-ivory/50 uppercase tracking-wider ml-1">Air & Ether</span>
                   </div>
-                  <span className="text-[10px] uppercase tracking-wider text-charcoal-muted font-medium block mb-1.5">
-                    Air & Ether · Space
-                  </span>
-                  <p className="text-xs text-charcoal-muted leading-relaxed">
-                    Governs movement and mind. Balanced with warm sesame oil, grounding pressure, and deep quietude.
-                  </p>
+                  <div className="sm:col-span-8">
+                    <p className="text-xs text-ivory/70 leading-relaxed font-light">
+                      Governs movement and nerve transmission. Restored through slow, grounding rhythm, warmed black sesame oils, and silence.
+                    </p>
+                  </div>
                 </div>
 
                 {/* Pitta */}
-                <div className="p-5 rounded-xl bg-ivory border border-antique hover:border-gold/60 transition-all duration-300">
-                  <div className="flex items-center gap-2 text-terracotta mb-2">
-                    <Sun className="w-4 h-4 text-terracotta-light" />
-                    <span className="font-serif text-lg font-medium">Pitta (पित्त)</span>
+                <div className="py-4.5 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-4 items-baseline">
+                  <div className="sm:col-span-4 flex items-center gap-2">
+                    <Sun className="w-3.5 h-3.5 text-gold shrink-0" />
+                    <span className="font-serif text-lg font-normal text-ivory">Pitta (पित्त)</span>
+                    <span className="text-[10px] text-ivory/50 uppercase tracking-wider ml-1">Fire & Water</span>
                   </div>
-                  <span className="text-[10px] uppercase tracking-wider text-charcoal-muted font-medium block mb-1.5">
-                    Fire & Water · Metabolism
-                  </span>
-                  <p className="text-xs text-charcoal-muted leading-relaxed">
-                    Governs digestion and clarity. Soothed with cooling coconut oils, chandan, and gentle jasmine florals.
-                  </p>
+                  <div className="sm:col-span-8">
+                    <p className="text-xs text-ivory/70 leading-relaxed font-light">
+                      Governs metabolism and clarity. Tempered through cooling pink lotus extracts, sandalwood pastes, and gentle floral pressure.
+                    </p>
+                  </div>
                 </div>
 
                 {/* Kapha */}
-                <div className="p-5 rounded-xl bg-ivory border border-antique hover:border-gold/60 transition-all duration-300">
-                  <div className="flex items-center gap-2 text-forest mb-2">
-                    <Mountain className="w-4 h-4 text-forest-light" />
-                    <span className="font-serif text-lg font-medium">Kapha (कफ)</span>
+                <div className="py-4.5 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-4 items-baseline">
+                  <div className="sm:col-span-4 flex items-center gap-2">
+                    <Mountain className="w-3.5 h-3.5 text-botanical-light shrink-0" />
+                    <span className="font-serif text-lg font-normal text-ivory">Kapha (कफ)</span>
+                    <span className="text-[10px] text-ivory/50 uppercase tracking-wider ml-1">Earth & Water</span>
                   </div>
-                  <span className="text-[10px] uppercase tracking-wider text-charcoal-muted font-medium block mb-1.5">
-                    Earth & Water · Structure
-                  </span>
-                  <p className="text-xs text-charcoal-muted leading-relaxed">
-                    Governs stability and immunity. Invigorated with herbal dry poultices, mustard seeds, and warm spice.
-                  </p>
+                  <div className="sm:col-span-8">
+                    <p className="text-xs text-ivory/70 leading-relaxed font-light">
+                      Governs structure and stability. Stimulated through dry herbal friction, warm herbal compresses, and invigorating botanicals.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Quote attribution block */}
-            <blockquote className="p-6 rounded-2xl bg-forest text-ivory relative overflow-hidden">
-              <div className="relative z-10 flex items-start gap-4">
-                <Droplet className="w-6 h-6 text-gold shrink-0 mt-1" />
-                <div>
-                  <p className="font-serif italic text-lg sm:text-xl text-ivory leading-snug">
-                    "When diet and lifestyle are wrong, medicine is of no use. 
-                    When diet and lifestyle are pure, medicine is of no need."
-                  </p>
-                  <cite className="block text-xs uppercase tracking-[0.2em] text-gold-light mt-3 not-italic">
-                    — Charaka Samhita (circa 300 BCE)
-                  </cite>
-                </div>
-              </div>
+            {/* Subtle Classical Epigraph */}
+            <blockquote className="pl-5 border-l-2 border-blush/40 py-1 space-y-1.5">
+              <p className="font-serif italic text-base sm:text-lg text-ivory/90 leading-snug">
+                "Health is the balanced flow of vital energies, nourished tissues, and a peaceful mind residing in its natural home."
+              </p>
+              <cite className="block text-[11px] uppercase tracking-[0.18em] text-blush/80 not-italic font-light">
+                — Sushruta Samhita (circa 600 BCE)
+              </cite>
             </blockquote>
 
           </div>
 
-          {/* Asymmetrical Right Column: Natural Textures & Botanical Collage */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="relative">
-              
-              {/* Primary Image: Botanical Herbal Oils & Mortar */}
-              <div className="rounded-2xl overflow-hidden shadow-xl border-4 border-ivory">
-                <div className="aspect-[3/4] relative overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=1200&q=85"
-                    alt="Ayurvedic herbal oils, cold-pressed extracts, and botanical remedies"
-                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-forest/80 via-transparent to-transparent opacity-70" />
-                  
-                  <div className="absolute bottom-5 left-5 right-5 text-ivory">
-                    <span className="text-[10px] tracking-[0.2em] uppercase text-gold-light">Purity Guaranteed</span>
-                    <h4 className="font-serif text-lg text-ivory mt-0.5">Cold-pressed single estate oils</h4>
-                  </div>
-                </div>
-              </div>
-
-              {/* Overlapping Secondary Image: River Stones & Water */}
-              <div className="absolute -bottom-8 -left-8 w-44 sm:w-52 rounded-xl overflow-hidden shadow-2xl border-4 border-ivory hidden sm:block">
-                <div className="aspect-square relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1512290900672-1f02e6040857?auto=format&fit=crop&w=800&q=85"
-                    alt="River stones and water therapy"
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-
-              {/* Watercolor Blossom Overlay */}
-              <div className="absolute -top-10 -right-8 w-32 h-32 pointer-events-none animate-subtle-float">
+          {/* Right Column: Grounded Editorial Visual */}
+          <div className="lg:col-span-5 space-y-4">
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-midnight shadow-water-depth">
+              <div className="aspect-[4/5] relative overflow-hidden">
                 <img
-                  src="/images/f3.png"
-                  alt="Ayurvedic Botanical Blossom"
-                  className="w-full h-full object-contain filter drop-shadow-md"
+                  src="/images/herbs2.png"
+                  alt="Ayurvedic raw herbs, brass vessel, and dried lotus petals"
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-102"
+                  loading="lazy"
                 />
-              </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-pond via-pond/30 to-transparent opacity-85" />
 
-            </div>
-
-            {/* Note on Authenticity */}
-            <div className="pt-10 sm:pt-14">
-              <div className="p-5 rounded-xl bg-ivory/80 border border-forest/10 space-y-2">
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-forest" />
-                  <span className="text-xs font-semibold uppercase tracking-wider text-forest">
-                    Non-Commercial Commitment
+                <div className="absolute bottom-5 left-5 right-5 text-ivory">
+                  <span className="text-[10px] uppercase tracking-[0.22em] text-blush block mb-1 font-medium">
+                    Sanctuary Botanical Standard
                   </span>
+                  <h4 className="font-serif text-xl text-ivory font-light leading-snug">
+                    Steeped in small copper and earthenware vessels
+                  </h4>
+                  <p className="text-xs text-ivory/75 mt-1 font-light leading-relaxed">
+                    Cold-pressed single-source oils prepared in adherence to traditional Vedic decanting principles.
+                  </p>
                 </div>
-                <p className="text-xs text-charcoal-muted leading-relaxed">
-                  We never use mineral oils, artificial fragrances, or synthetic stabilizers. 
-                  Every decoction is steeped fresh in our herbal dispensary each morning.
-                </p>
               </div>
             </div>
 
+            <div className="p-4 rounded-xl bg-midnight/40 border border-white/5 flex items-center justify-between text-xs text-ivory/70">
+              <span className="font-light">Zero synthetic fragrances or preservatives</span>
+              <span className="text-gold font-serif italic text-sm">100% Botanical Origin</span>
+            </div>
           </div>
 
         </div>
