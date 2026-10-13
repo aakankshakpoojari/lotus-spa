@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-ivory: #F5F0E5;
+    --color-cream: #EAE2D3;
+    --color-sage: #87927A;
+    --color-forest: #34483A;
+    --color-terracotta: #633D32;
+    --color-gold: #C4A36A;
+    --color-charcoal: #292923;
+  }
+
+  body {
+    background-color: #F5F0E5;
+    color: #292923;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Custom organic grain texture overlay */
+.bg-grain {
+  background-image: radial-gradient(rgba(41, 41, 35, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Custom delicate border styles */
+.border-antique {
+  border-color: rgba(196, 163, 106, 0.25);
+}
+
+.border-forest-subtle {
+  border-color: rgba(52, 72, 58, 0.15);
+}
+
+/* Custom smooth luxury focus outlines */
+*:focus-visible {
+  outline: 2px solid #87927A;
+  outline-offset: 3px;
+}
+
+/* Luxury scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #EAE2D3;
+}
+::-webkit-scrollbar-thumb {
+  background: #87927A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #34483A;
+}
+
+/* Image reveal overlay animations */
+@keyframes subtle-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+.animate-subtle-float {
+  animation: subtle-float 8s ease-in-out infinite;
+}
+
+@keyframes gentle-pulse {
+  0%, 100% {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+
+.animate-gentle-pulse {
+  animation: gentle-pulse 6s ease-in-out infinite;
+}
